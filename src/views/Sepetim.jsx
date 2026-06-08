@@ -19,7 +19,6 @@ const Cart = () => {
   }, []);
 
   const handleRemoveItem = (id) => {
-    // Silinen ürünü state'den çıkararak sayfayı yenilemeden ekrandan siliyoruz
     setCartItems(cartItems.filter((item) => item.id !== id));
   };
 
@@ -48,15 +47,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-// import { useEffect, useState } from "react";
-
-// const [products, setProducts] = useState([]);
-// useEffect(() => {
-//   async function getPosts() {
-//     let response = await fetch("http://localhost:3000/cart");
-//     let data = await response.json();
-//     setProducts(data);
-//   }
-//   getPosts();
-// }, []);
