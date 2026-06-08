@@ -4,7 +4,7 @@ const CartCard = ({ item, onRemove }) => {
       await fetch(`http://localhost:5000/cart/${item.id}`, {
         method: "DELETE",
       });
-      onRemove(item.id); // Arayüzü güncellemek için parent component'e haber veriyoruz
+      onRemove(item.id);
     } catch (error) {
       console.error("Ürün silinirken hata oluştu:", error);
     }
